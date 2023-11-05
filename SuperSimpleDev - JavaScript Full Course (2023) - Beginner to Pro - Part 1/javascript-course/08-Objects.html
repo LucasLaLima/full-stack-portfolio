@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Objects</title>
+    </head>
+
+    <body>
+      <script>
+        /*
+        const product = {
+          name: 'socks',
+          price: 1090
+        };
+        console.log(product);
+        */
+
+        /*
+        const product = {
+          name: 'shirt',
+          'delivery-time': '1 day',
+          rating: {
+            stars: 4.5,
+            count: 87
+          },
+          fun: function function1(){
+            console.log('Function inside object.');
+          }
+        }
+        console.log(product.name); // Dot notation is preferred
+        console.log(product['name']);
+        console.log(product['delivery-time']);
+        console.log(product.rating.stars);
+        console.log(product.rating.count);
+        product.fun();
+        console.log(typeof console.log);
+
+        // Converting Object to JSON
+        console.log(JSON.stringify(product));
+        // Result of JSON.stringify is a string
+        // It does not save any functions
+        const js1 = JSON.stringify(product);
+        console.log(JSON.parse(js1));
+        // Helps you convert between string and JavaScript object
+
+        // How to use local storage, as to keep score updated.
+        */
+
+        // Auto-boxing
+        // ie. the string automatically gets the property length, and function toUpperCase()
+        console.log('hello'.length); //property
+        console.log('hello'.toUpperCase()); //func
+
+        const object1 = {
+          message: 'hello'
+        };
+
+        const object2 = object1; // copy by reference
+
+        object1.message = 'good job';
+        console.log(object1);
+        console.log(object2);
+
+        const object3 = {
+          message: 'good job'
+        };
+
+        console.log(object3 === object1); // false, they are unique addresses in memory
+        console.log(object2===object1); //true, same place in memory
+
+        // Shortcuts for objects
+        const object4 = {
+          message: 'good job',
+          price: 799
+        };
+        // const message = object4.message; // A
+        const { message, price } = object4; // B
+        // Lines A and B are the same
+        // Line 75 takes properety out of object and saves it in a variable with same name as property
+        console.log(price);
+
+        const object5 = {
+          // message: message
+          message, // Shorthand propert
+          // method: function function1(){
+          //   console.log('method');
+          // }
+          // method(){
+          //   console.log('method')
+          // } // shorthand method writing
+          test: function f2(){
+            console.log('test')
+          }
+        }
+
+        console.log(object5);
+        // object5.method();
+        object5.test();
+
+      </script>
+    </body>
+
+</html>

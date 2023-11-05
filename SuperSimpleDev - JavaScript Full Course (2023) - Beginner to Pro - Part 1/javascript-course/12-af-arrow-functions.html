@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Arrow Functions</title>
+    </head>
+
+    <body>
+      <script>
+        // Below functions are equal
+        const regularFunction = function(param){
+          console.log('hello');
+          return 5;
+        }
+
+        const arrowFunction = (param) => {
+          console.log('hello');
+          return 5;
+        };
+      
+        // Arrow function
+        // When arrow functions have one param, parentheses are options
+        const oneParam = param => {
+          console.log(param+1);
+        };
+        // oneParam(2);
+        
+        // One line
+        // When an arrow function is one line long, you don't need brackets in function execution section
+        const oneLine = () => 2+3;
+        // console.log(oneLine());
+
+        // Arrow function with loop
+        [
+          'hi',
+          'hello',
+          'goodbye'
+        ].forEach((value, index) => {
+          if(value=== 'hello') {
+            return
+          }
+          console.log(index);
+          console.log(value);
+        });
+      </script>
+    </body>
+</html>

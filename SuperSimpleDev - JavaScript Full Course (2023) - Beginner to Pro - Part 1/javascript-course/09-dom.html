@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Document Object Model (DOM)</title>
+    </head>
+
+    <body>
+      <button>hello</button>
+      <button class="js-button">Second button</button>
+      <script>
+        /*
+        // Learning about document object properties
+        document.body.innerHTML = 'hello'; // provided by JS
+        document.title = 'Good Job!'; // this docuement object MODELS the webpage, it is linked to the webpage
+        */
+
+        /*
+        // Interacting with Document Object Properties
+        console.log(document.title);
+        document.title = 'Changed';
+        console.log(document.body); // prints out code in <script> section
+
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good Job!</button>'; // can replace HTML
+        */
+
+        /*
+        // Methods of document object
+        */
+        console.log(document.querySelector('button')); // retrieves first button from page
+
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button').innerHTML = 'Test Changed';
+
+        // console.log(document.querySelector('.js-button')); //. means look for class
+
+        const buttonElement = document.querySelector('.js-button')
+        console.log(buttonElement);
+
+        // Window Element
+        // window.document;
+        // window.console.log('window');
+        // window.alert()
+
+      </script>
+    </body>
+</html>
