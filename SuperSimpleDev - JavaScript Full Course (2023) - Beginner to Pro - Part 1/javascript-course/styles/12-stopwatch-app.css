@@ -1,0 +1,49 @@
+p {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.start-button {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.stop-button {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+}
+
+.reset-button {
+  background-color: white;
+  color: black; 
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+
