@@ -1,0 +1,90 @@
+/* Grid */
+.board-grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+  background-color: blue;
+}
+
+/* Square Values */
+.square-value-null {
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  cursor: pointer;
+  border-style: none;
+  border-color: red;
+  background-color: transparent;
+}
+
+.square-value-x {
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  cursor: pointer;
+  border-style: none;
+  border-color: red;
+  background-color: transparent;
+}
+
+.square-value-o {
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  cursor: pointer;
+  border-style: none;
+  border-color: red;
+  background-color: transparent;
+}
+
+/* All game squares */
+.game-square {
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+/* Top left square */
+.game-square-pos-0-0 {
+  border-top-width: 0px;
+  border-left-width: 0px;
+}
+
+/* Top middle square */
+.game-square-pos-0-1 {
+  border-top-width: 0px;
+}
+
+/* Top right square */
+.game-square-pos-0-2 {
+  border-top-width: 0px;
+  border-right-width: 0px;
+}
+
+/* Middle left square */
+.game-square-pos-1-0 {
+  border-left-width: 0px;
+}
+
+/* Middle right square */
+.game-square-pos-1-2 {
+  border-right-width: 0px;
+}
+
+/* Bottom left square */
+.game-square-pos-2-0 {
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+
+/* Bottom middle square */
+.game-square-pos-2-1 {
+  border-bottom-width: 0px;
+}
+
+/* Bottom right square */
+.game-square-pos-2-2 {
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
