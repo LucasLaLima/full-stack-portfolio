@@ -1,0 +1,171 @@
+/* Subscribe Button */
+.subscribe-button {
+  background-color: rgba(216, 18, 18);
+  color:white;
+  border: none;
+  height: 36px;
+  width: 105px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+}
+
+/* Hover behavior. This is a pseudo-class */
+.subscribe-button:hover {
+  /* background-color: green; */
+  opacity: 0.8;
+}
+
+/* Another pseudo-class. As it's being clicked.  */
+.subscribe-button:active {
+  /* background-color: blue; */
+  opacity: 0.5;
+}
+
+/* Join Button */
+.join-button {
+  background-color: white;
+  color:blue;
+  border-color: blue;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  /*
+  Setting these are not desired
+  height: 36px;
+  width: 65px; */
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s, 
+    color 0.15s;
+}
+
+.join-button:hover {
+  background-color: blue ;
+  color:white;
+}
+
+.join-button:active {
+  opacity: 0.7;
+}
+
+/* Tweet Button */
+.tweet-button {
+  background-color: #1d9bf0;
+  color: white;
+  border: none;
+  border-color: #1d9bf0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 36px;
+  width: 70px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: box-shadow 0.5s;
+}
+
+.tweet-button:hover {
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+/* One Button */
+.one-button {
+  font-size: 20px;
+  background-color: green;
+  color:white;
+  border:none;
+  margin:10px;
+  margin-right: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.one-button:hover {
+  padding-right:20px;
+  margin-right: 5px;
+  padding-left: 20px;
+  margin-left: 5px;
+  transition: margin-left 1s, padding-left 1s, 
+  margin-right 1s, padding-right 1s;
+}
+
+.two-button {
+  font-size: 20px;
+  background-color: green;
+  color:white;
+  border:none;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.two-button:hover {
+  padding-right:20px;
+  margin-right: 5px;
+  padding-left: 20px;
+  margin-left: 5px;
+  transition: margin-left 1s, padding-left 1s, 
+  margin-right 1s, padding-right 1s;
+
+}
+
+.three-button {
+  font-size: 20px;
+  background-color: green;
+  color:white;
+  border:none;
+  margin:10px;
+  margin-left: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.three-button:hover {
+  padding-right:20px;
+  margin-right: 5px;
+  padding-left: 20px;
+  margin-left: 5px;
+  transition: margin-left 1s, padding-left 1s, 
+  margin-right 1s, padding-right 1s;
+}
+
+.four-button {
+  font-size: 20px;
+  background-color: green;
+  color:white;
+  border:none;
+  margin:10px;
+  margin-left: 10px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+  vertical-align: top ;
+}
+
+.four-button:active {
+  box-shadow: none;
+  margin-top: 13px;
+  margin-left: 13px;
+}
+
+.five-button{
+  font-size: 20px;
+  background-color: green;
+  color:white;
+  border:none;
+  margin:10px;
+  margin-left: 10px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+  vertical-align: top ;
+  transition: padding 1s;
+}
+
+.five-button:hover {
+  padding: 20px 30px 20px 30px;
+}
