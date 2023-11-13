@@ -1,0 +1,27 @@
+.thumbnail {
+  width: 300px;
+  /* height: 300px;
+  object-fit: fit; maintains shape
+  object-position: bottom; /* how we orient inside area 
+  border-width: 2px;
+  border-style: solid;
+  border-color: red; */
+  display: block;
+}
+
+.search-bar {
+  /* font-size: 20px;
+  margin-left: 12px; */
+  display: block;
+}
+
+.video-title {
+  width: 300px;
+}
+
+.video-preview {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}

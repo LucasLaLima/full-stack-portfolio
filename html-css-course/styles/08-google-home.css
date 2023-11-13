@@ -1,0 +1,63 @@
+.logo-div, .search-bar-div, .search-buttons {
+  text-align: center;
+}
+
+.logo-image {
+  height: 50%;
+  width: 25%;
+}
+
+.search-bar {
+  width: 700px;
+  height: 50px;
+  border-radius: 25px;
+  border-width: 0px;
+  font-size: 20px;
+  text-indent: 20px;
+  box-shadow: 0px 0px 10px 0px #d0cece;
+  background: #fff;
+  margin: 25px auto;
+  display: block;
+}
+
+button {
+  background-color: rgb(241, 241, 241);
+  font-family: Arial;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* 
+// From lesson 8
+.logo {
+  height: 50%;
+  width: 25%;
+  display: block;
+}
+
+.search-bar {
+  width: 700px;
+  height: 50px;
+  border-radius: 25px;
+  border-width: 0px;
+  font-size: 20px;
+  text-indent: 20px;
+  box-shadow: 0px 0px 10px 0px #d0cece;
+  background: #fff;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.centered-low {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+} */

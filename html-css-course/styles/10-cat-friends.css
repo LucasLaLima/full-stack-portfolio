@@ -1,0 +1,62 @@
+.friend-container {
+  display: block;
+  width: 500px;
+  padding-top: 10px;
+}
+
+.thumbnail-container {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.info-container {
+  display: inline-block;
+  vertical-align: center;
+}
+
+.follow-button-container {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  margin-top: 20px;
+  right: 500px;
+}
+
+.thumbnail {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 500px;
+}
+
+.name {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.nickname {
+  font-family: Arial;
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: rgb(161, 155, 155);
+}
+
+.status {
+  font-family: Arial;
+  color: rgb(161, 155, 155);
+}
+
+.follow-button {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(67, 152, 232);
+  color: white;
+  padding: 7px 12px 7px 12px;
+}
+
