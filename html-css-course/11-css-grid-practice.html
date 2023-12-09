@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Practice</title>
+  </head>
+  <body style="
+  padding-bottom: 1000px;"
+  >
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 100px;
+      ">
+      <div style="background-color:lightblue;">div 1</div>
+      <div style="background-color: lightpink;">
+        div 2
+        
+        <p>
+          Nested paragraph
+        </p>
+      </div>
+    </div>
+
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 100px 200px;
+      margin-top: 30px;
+      ">
+      <div style="background-color:lightblue;">100px</div>
+      <div style="background-color: lightpink;">
+        100px
+        <p>
+          Nested paragraph
+        </p>
+      </div>
+      <div style="background-color: lightgreen;">200px</div>
+      <!-- Div not alloted by grid wraps around to next row -->
+      <div style="background-color: lightyellow;">400px</div> 
+    </div>
+
+    <!-- 1fr takes up free/remaining space -->
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      margin-top: 30px;
+      ">
+      <div style="background-color:lightblue;">100px</div>
+      <div style="background-color: lightpink;">1fr</div>
+    </div>
+
+    <!-- *fr values are ratioed when used next to each other -->
+    <!-- In this case, the third div takes up 2/3 of remaining space -->
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr;
+      margin-top: 30px;
+      ">
+      <div style="background-color:lightblue;">100px</div>
+      <div style="background-color: lightpink;">1fr</div>
+      <div style="background-color: lightyellow;">2fr</div>
+    </div>
+
+    <!-- 3 columns of equal space, and robust when screen is pulled -->
+    <div style="
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 30px;
+      column-gap: 20px;
+      row-gap: 40px;
+      ">
+      <div style="
+      background-color:lightblue;
+      height: 200px;">1fr</div>
+      <div style="
+      background-color: lightpink;
+      height: 200px">1fr</div>
+      <div style="
+      background-color: lightyellow;
+      height: 200px">1fr</div>
+      <div style="
+      background-color: lightgreen;
+      height: 200px">1fr</div>
+      <div style="
+      background-color: lightcoral;
+      height: 200px">1fr</div>
+      <div style="
+      background-color: lightcyan;
+      height: 200px">1fr</div>
+    </div>
+  </body>
+</html>

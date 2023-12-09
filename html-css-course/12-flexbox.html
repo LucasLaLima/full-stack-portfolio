@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Practice</title>
+  </head>
+  <body>
+    <!--This div will become the flexbox -->
+    <!-- Only take up as much horizontal space as they need to -->
+    <!-- If we increase height of second div, all flexboxes will respond -->
+    <div style="
+        display: flex;
+        flex-direction: row;
+      "> 
+      <div style="
+        background-color: lightblue;
+        ">div 1 text consuming more space</div>
+      <div style="
+        background-color: lightpink;
+      ">div 2 <p>new line</p></div>
+    </div>
+
+    <!-- Another example -->
+    <!-- flex: 1; is the flexbox equivalent to grid: 1fr; -->
+    <div style="
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+      "> 
+      <div style="
+        background-color: lightblue;
+        width: 100px;
+        ">100px</div>
+      <div style="
+        background-color: lightpink;
+        flex: 1;
+      ">flex: 1</div>
+    </div>
+
+    <!-- Another example -->
+    <!-- Two items with flex will take up a percentage of the remaining flex -->
+    <!-- In this instance, the second flex is 2/3 of flex value -->
+    <!-- It'll take up remaining 2/3 of space -->
+    <!-- Moving elements around/changing the order preserves size of each element using flexbox-->
+    <!-- The size of elements using grid is determined by the grid specs -->
+    <div style="
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+      "> 
+      <div style="
+        background-color: lightblue;
+        width: 100px;
+        ">100px</div>
+      <div style="
+        background-color: lightpink;
+        flex: 1;
+      ">flex: 1</div>
+      <div style="
+      background-color: lightblue;
+      flex: 2;
+      ">flex: 2</div>
+    </div>
+  </body>
+</html>
