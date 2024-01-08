@@ -1,0 +1,99 @@
+/* Search Bar */
+.search-bar {
+  display: flex;
+  flex: row;
+  background-color: rgb(175, 125, 175);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center; /* centers items vertically */
+}
+
+.left-section {
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.middle-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-field {
+  height: 30px;
+  border-radius: 20px;
+  text-indent: 10px;
+  width: 75%;
+  border-color: white;
+  border-style: solid;
+}
+
+.right-section {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.download-button {
+  background-color: rgb(175, 125, 175);
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
+}
+
+/* Notification Box */
+.notification-box {
+  border-color: rgb(197, 192, 192);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 5px 10px 5px 10px;
+  display: block;
+  /* align-items: centers; */
+  font-family: Roboto;
+}
+.home-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.count{
+  /* width: 15px */
+  /* margin-right: 10px; */
+  background-color: rgb(100, 100, 231);
+  color: white;
+  border-radius: 14px;
+  padding: 5px 12px 5px 12px;
+  font-size: 14px;
+}
+
+.notification-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.messages-row {
+  display: flex;
+  justify-content: center;
+}
+
+.messages-text {
+  flex: 1;
+}
