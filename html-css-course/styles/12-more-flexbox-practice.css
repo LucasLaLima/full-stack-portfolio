@@ -48,6 +48,14 @@
   padding: 5px 10px 5px 10px;
 }
 
+.download-button:hover {
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+.download-button:active {
+  opacity: 0.5;
+}
+
 /* Notification Box */
 .notification-box {
   border-color: rgb(197, 192, 192);
