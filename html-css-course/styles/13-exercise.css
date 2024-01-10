@@ -1,0 +1,62 @@
+.header {
+  box-shadow: 0px 1px 5px rgb(155, 153, 153);
+  padding: 10px 0px 10px 10px;
+  width: 420px;
+}
+
+.first-line {
+  font-family: Roboto, Arial;
+  color: rgb(156, 150, 150);
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+/* Email */
+
+.email {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  font-family: Roboto, Arial;
+  padding-bottom: 20px;
+}
+
+/* left section */
+.left-section {
+  padding-right: 10px;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 500px;
+}
+
+/* right section */
+.right-section {
+  flex: 1;
+}
+
+.email-meta {
+  display: flex;
+}
+
+.email-sender {
+  flex: 1;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.email-timestamp {
+  color: rgb(155, 153, 153);
+}
+
+.email-subject {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.email-body {
+  color: rgb(155, 153, 153);
+}
