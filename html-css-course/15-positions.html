@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Position Practice
+    </title>
+  </head>
+  <body
+    style="
+      height: 3000px; /*allows us to scroll*/
+      padding-top: 60px;
+      padding-left: 80px;
+    "
+    >
+    <div
+      style="
+        background-color: black;
+        color: white;
+        position: fixed; /* element stays at relative position on page*/
+        /* top: 10px; padding from top of page */
+        /* left: 10px; padding from left of page */
+        /* right: 50px; with both left and right, we stretch element to meet conditions */
+        /* bottom: 100px same with top and bottom */
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 50px; /*opposed to bottom*/
+        z-index: 1;
+        ;
+      ">
+      header
+    </div>
+    <div 
+      style="
+        background-color: green;
+        color: white;
+        position: fixed;
+        left:0;
+        bottom:0;
+        top: 50px;
+        width: 72px;
+    ">
+      <div
+        style="
+          position: absolute;
+          background-color: red;
+          color: white;
+          /* left: 10px; */
+          top: 0px;
+          right: 0px;
+          z-index: 0;
+        "
+        >
+        <!-- Whenever position absolute is placed inside fixed, its placed relative to fixed element -->
+        <!-- Place elements in corners of other elements -->
+        [X]
+      </div>
+      Sidebar
+    </div>
+
+    <!-- Fixed positions are fixed in the BROWSER WINDOW -->
+    <!-- Absolute is fixed on the ENTIRE PAGE (constantly moving up and down) -->
+    <!-- Relative is in relation to an element -->
+    <!-- Since element is written below header, it will appear in-front of header when scrolled -->
+    <!-- Can introduce z-index property (higher number wins superposition battle)-->
+    <div
+      style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        /* left: 10px; */
+        top: 60px;
+        right: 10px;
+        z-index: 0;
+      "
+    >
+      Absolute
+    </div>
+
+    <div
+      style="
+        background-color: lightblue;
+        height:200px;
+        width:200px;
+        position: static; 
+      ">
+      div 1
+    </div>
+    <div
+      style="
+        background-color: lightpink;
+        height:200px;
+        width:200px;
+        position: relative;
+      ">
+      div 2
+      <div
+        style="
+          position: absolute;
+          background-color: black;
+          color: white;
+          /* left: 10px; */
+          /* top: 60px; */
+          right: 10px;
+          bottom: 10px;
+          z-index: 0;
+        "
+      >
+      5:00
+      </div>
+    </div>
+  </body>
+</html>
