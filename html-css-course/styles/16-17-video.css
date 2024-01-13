@@ -1,16 +1,30 @@
-/* Organized into other 12-*.css files */
-
-p {
-  font-family: Roboto, Arial;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .video-grid {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
+  column-gap: 16px;
   row-gap: 40px;
+  /* text-decoration: underline; */
+  /* border: 2px solid red; */
+}
+
+/* Responsive Grid Design */
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Combining the two above */
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .thumbnail {
@@ -25,12 +39,6 @@ p {
   /* display: block; */
 }
 
-.search-bar {
-  /* font-size: 20px;
-  margin-left: 12px; */
-  display: block;
-}
-
 /* .channel-preview-column {
   display: inline-block;
   width: 50px;
@@ -39,12 +47,27 @@ p {
 } */
 
 .channel-picture {
-  width: 40px;
+  width: 36px;
   border-radius: 200px;
+
 }
 
 .thumbnail-row {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  /* font-family: Roboto, Arial; */
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  padding: 4px 5px 4px 5px;
+  border-radius: 2px;
 }
 
 .video-info-grid {
@@ -71,7 +94,7 @@ p {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .video-author-row,

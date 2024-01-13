@@ -1,0 +1,36 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  width: 72px;
+  background-color: white;
+  z-index: 200;
+  padding-top: 5px;
+  }
+
+.sidebar-link {
+  background-color: white;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Direction to display flex boxes */
+  flex-direction: column; 
+}
+
+.sidebar-link:hover {
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+/* Spaces allow you to dive into a class and target elements */
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+/* Targets div in sidebar-link (ie. titles of buttons) */
+.sidebar-link div {
+  font-size: 10px;
+}
