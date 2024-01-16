@@ -1,4 +1,4 @@
-# js-tutorials
+# full-stack-portfolio
 
 ./javascript-course:
 - Youtube Video: SuperSimpleDev - JavaScript Full Course (2023) - Beginner to Pro - Part 1
