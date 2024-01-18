@@ -11,6 +11,8 @@ Steps to making a website with JavaScript:
 3. Make it interactive
 */
 
+/*
+// Decided to import products from ./data/products.js
 const products = [
   {
     image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
@@ -38,8 +40,18 @@ const products = [
       count: 56
     },
     priceCents: 799
+  },
+  {
+    image: 'images/products/black-2-slot-toaster.jpg',
+    name: '2 Slot Toaster - Black',
+    rating: {
+      stars: 5,
+      count: 2197
+    },
+    priceCents: 1899
   }
 ];
+*/
 
 // Store final
 let productsHTML = '';
