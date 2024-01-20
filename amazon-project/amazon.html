@@ -57,8 +57,17 @@
     </div>
 
     <!-- Script element order matters -->
-    <script src="./data/cart.js"></script>
+    <!-- <script src="./data/cart.js"></script>
     <script src="./data/products.js"></script>
-    <script src="./scripts/amazon.js"></script>
+    <script src="./scripts/amazon.js"></script> -->
+
+    <!-- Introduction to Modules; prevents naming conflicts -->
+    <!-- To load variables out of a different file -->
+    <!-- 1. Add type="module" attribute -->
+    <!-- 2. Export-->
+    <!-- 3. Import -->
+    <!-- Benefits: avoids naming conflicts, can rename imports using 'as <new name>', don't have to worry about order of files -->
+    <script src="data/products.js"></script>
+    <script type="module" src="scripts/amazon.js"></script>
   </body>
 </html>

@@ -120,6 +120,10 @@ products.forEach((product) => {
 // Full HTML print out
 // console.log(productsHTML);
 
+// All imports
+// Modules only work with Live Servers
+import {cart} from '../data/cart.js';
+
 // Puts HTML on page
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
