@@ -56,6 +56,13 @@ const products = [
 // Store final
 let productsHTML = '';
 
+/* Data Attributes
+- Buttons below have data attributes
+- Attributes need to start with 'data-'
+- Hyphenated names are colloquially known as kebab-case
+- The entire data attribute name needs to be kebab case
+*/
+
 // Looping through products
 products.forEach((product) => {
   productsHTML += `
@@ -103,12 +110,51 @@ products.forEach((product) => {
         Added
       </div>
 
-      <button class="add-to-cart-button button-primary">
+      <button class="add-to-cart-button button-primary js-add-to-cart"
+      data-product-id="${product.id}">
         Add to Cart
       </button>
     </div>`;
 });
 
+// Full HTML print out
 // console.log(productsHTML);
 
+// Puts HTML on page
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+// Add-To-Cart Functionality
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+  button.addEventListener('click', () => {
+    // Debug
+    // console.log('Added product');
+    
+    // Data Attributes revealed
+    // console.log(button.dataset.productName);
+
+    // *** CRUCIAL *** 
+    // The button's "data-" name gets converted from kebab case
+    // to camel case.
+    const productId = button.dataset.productId;
+
+    // Checks if product is already in cart array
+    let matchingItem;
+    cart.forEach((item) => {
+      if (productId === item.productId){
+        matchingItem = item;
+      }
+    });
+
+    // If item is in cart, increase item quantity
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+    } else {
+      cart.push({
+        productId: productId,
+        quantity: 1
+      });
+    }
+
+    console.log(cart);
+  });
+});
