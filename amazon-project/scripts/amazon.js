@@ -156,6 +156,16 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
       });
     }
 
-    console.log(cart);
+    // Updats master cart count
+    let cartQunatity = 0;
+    cart.forEach((item) => {
+      cartQunatity += item.quantity;
+    });
+    document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
+
+
+    // Debug
+    // console.log(cartQunatity);
+    // console.log(cart);
   });
 });
