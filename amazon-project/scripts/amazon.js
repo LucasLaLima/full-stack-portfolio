@@ -146,6 +146,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     });
 
     // If item is in cart, increase item quantity
+    // testing
     if (matchingItem) {
       matchingItem.quantity += 1;
     } else {
