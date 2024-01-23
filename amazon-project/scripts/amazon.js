@@ -94,7 +94,7 @@ products.forEach((product) => {
       </div>
 
       <div class="product-quantity-container">
-        <select>
+        <select class="js-quantity-selector-${product.id}">
           <option selected value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -131,6 +131,7 @@ function updateCartQuantity(){
   let cartQunatity = 0;
   cart.forEach((cartItem) => {
     cartQunatity += cartItem.quantity;
+    console.log(cart);
   });
   document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
 }
@@ -145,7 +146,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     // The button's "data-" name gets converted from kebab case
     // to camel case.
     const productId = button.dataset.productId;
-
+  
     addToCart(productId);
     updateCartQuantity();
   });
