@@ -21,15 +21,19 @@ export function addToCart(productId) {
   });
 
   // Finds quantity to add to cart
-  let quantityValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+  let quantity = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
 
   // If item is in cart, increase item quantity
   if (matchingItem) {
-    matchingItem.quantity += quantityValue;
+    matchingItem.quantity += quantity;
   } else {
     cart.push({
-      productId: productId,
-      quantity: quantityValue
+      // ---Redundancy
+      // productId: productId,
+      // quantity: quantityValue
+      // ---
+      productId,
+      quantity
     });
   }
 }
