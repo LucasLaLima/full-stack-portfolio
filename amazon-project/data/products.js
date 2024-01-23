@@ -656,5 +656,33 @@ export const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "Additional Exercise - Backpack",
+    rating: {
+      stars: 2,
+      count: 100
+    },
+    priceCents: 6900,
+    keywords: [
+      "books",
+      "school"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "Additional Exercise - Umbrella",
+    rating: {
+      stars: 1,
+      count: 200
+    },
+    priceCents: 3000,
+    keywords: [
+      "rain",
+      "weather"
+    ]
   }
 ];

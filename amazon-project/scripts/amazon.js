@@ -131,7 +131,6 @@ function updateCartQuantity(){
   let cartQunatity = 0;
   cart.forEach((cartItem) => {
     cartQunatity += cartItem.quantity;
-    console.log(cart);
   });
   document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
 }
@@ -145,9 +144,13 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     // *** CRUCIAL *** 
     // The button's "data-" name gets converted from kebab case
     // to camel case.
-    const productId = button.dataset.productId;
+
+    // Exchanged for deconstruction approach
+    // const productId = button.dataset.productId;
+    let {productId} = button.dataset;
   
     addToCart(productId);
+    console.log(cart);
     updateCartQuantity();
   });
 });
