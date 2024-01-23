@@ -55,7 +55,7 @@ const products = [
 
 // All imports
 // Modules only work with Live Servers
-import {cart} from '../data/cart.js';
+import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 // Store final
@@ -122,18 +122,22 @@ products.forEach((product) => {
     </div>`;
 });
 
-// Full HTML print out
-// console.log(productsHTML);
-
 // Puts HTML on page
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-// Add-To-Cart Functionality
+// Updates Cart Count on main page
+function updateCartQuantity(){
+  // Updats master cart count
+  let cartQunatity = 0;
+  cart.forEach((cartItem) => {
+    cartQunatity += cartItem.quantity;
+  });
+  document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
+}
+
+// Add-To-Cart Button Functionality
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   button.addEventListener('click', () => {
-    // Debug
-    // console.log('Added product');
-    
     // Data Attributes revealed
     // console.log(button.dataset.productName);
 
@@ -142,35 +146,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     // to camel case.
     const productId = button.dataset.productId;
 
-    // Checks if product is already in cart array
-    let matchingItem;
-    cart.forEach((item) => {
-      if (productId === item.productId){
-        matchingItem = item;
-      }
-    });
-
-    // If item is in cart, increase item quantity
-    // testing
-    if (matchingItem) {
-      matchingItem.quantity += 1;
-    } else {
-      cart.push({
-        productId: productId,
-        quantity: 1
-      });
-    }
-
-    // Updats master cart count
-    let cartQunatity = 0;
-    cart.forEach((item) => {
-      cartQunatity += item.quantity;
-    });
-    document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
-
-
-    // Debug
-    // console.log(cartQunatity);
-    // console.log(cart);
+    addToCart(productId);
+    updateCartQuantity();
   });
 });
