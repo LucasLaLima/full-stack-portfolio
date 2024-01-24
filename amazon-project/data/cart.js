@@ -10,6 +10,8 @@ export const cart = [
   // }
 ];
 
+const addedMessageTimeouts = {};
+
 // Add to cart object function
 export function addToCart(productId) {
   // Checks if product is already in cart array
@@ -22,6 +24,27 @@ export function addToCart(productId) {
 
   // Finds quantity to add to cart
   let quantity = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+
+  // Causes Added[Check] to appear on screen
+  let addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+  addedMessage.classList.add('added-to-cart-appear');
+
+  // Added notification with refresh enabled
+  setTimeout(() => {
+    // Check to see if there is a running process
+    const previousTimeoutId = addedMessageTimeouts[productId];
+
+    // If running process, clear it 
+    if (previousTimeoutId) {
+      clearTimeout(previousTimeoutId);
+    }
+
+    // Sets timeout and introduces to the masterlist
+    const timeoutId = setTimeout(() => {
+      addedMessage.classList.remove('added-to-cart-appear');
+    }, 2000);
+    addedMessageTimeouts[productId] = timeoutId;
+  });
 
   // If item is in cart, increase item quantity
   if (matchingItem) {
