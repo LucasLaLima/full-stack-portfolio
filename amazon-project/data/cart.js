@@ -1,13 +1,13 @@
 // Export for modules
 export const cart = [
-  // {
-  //   productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-  //   quantity: 1
-  // },
-  // {
-  //   productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-  //   quantity: 20
-  // }
+  {
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    quantity: 1
+  },
+  {
+    productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+    quantity: 20
+  }
 ];
 
 const addedMessageTimeouts = {};
@@ -29,7 +29,7 @@ export function addToCart(productId) {
   let addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
   addedMessage.classList.add('added-to-cart-appear');
 
-  // Added notification with refresh enabled
+  // Causes Added[Check] to refresh
   setTimeout(() => {
     // Check to see if there is a running process
     const previousTimeoutId = addedMessageTimeouts[productId];
