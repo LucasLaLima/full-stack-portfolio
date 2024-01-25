@@ -1,5 +1,5 @@
 // Export for modules
-export const cart = [
+export let cart = [
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     quantity: 1
@@ -59,4 +59,19 @@ export function addToCart(productId) {
       quantity
     });
   }
+}
+
+// Removes product from cart
+export function removeFromCart(productId) {
+  const new_cart = [];
+
+  // Removal
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      new_cart.push(cartItem);
+    }
+  });
+
+  // Replaces master cart
+  cart = new_cart;
 }
