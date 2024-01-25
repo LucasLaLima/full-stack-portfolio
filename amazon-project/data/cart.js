@@ -1,18 +1,28 @@
 // Export for modules
-export let cart = [
-  {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    quantity: 1
-  },
-  {
-    productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    quantity: 20
-  }
-];
+export let cart = JSON.parse(localStorage.getItem('cart'));
 
-const addedMessageTimeouts = {};
+// Default cart value
+if (!cart) {
+  cart = 
+  [
+    {
+      productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+      quantity: 1
+    },
+    {
+      productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+      quantity: 20
+    }
+  ];
+}
+
+// Function to store cart to local storage
+function saveToStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
 
 // Add to cart object function
+const addedMessageTimeouts = {};
 export function addToCart(productId) {
   // Checks if product is already in cart array
   let matchingItem;
@@ -59,6 +69,9 @@ export function addToCart(productId) {
       quantity
     });
   }
+
+  // Saves cart to storage
+  saveToStorage();
 }
 
 // Removes product from cart
@@ -74,4 +87,7 @@ export function removeFromCart(productId) {
 
   // Replaces master cart
   cart = new_cart;
+
+  // Saves cart to storage
+  saveToStorage();
 }
