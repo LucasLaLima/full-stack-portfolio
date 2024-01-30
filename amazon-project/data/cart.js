@@ -107,8 +107,6 @@ export function calculateCartQuantity() {
 
 // Updates cart quantity
 export function updateCartQuantity(productId, newQuantity) {
-  //
-
   // Updates matching cart item's quantity
   cart.forEach((cartItem) => {
     if(cartItem.productId===productId){
