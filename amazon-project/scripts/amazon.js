@@ -55,7 +55,7 @@ const products = [
 
 // All imports
 // Modules only work with Live Servers
-import {cart, addToCart} from '../data/cart.js';
+import {cart, addToCart, calculateCartQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
 import {formatCurrency} from './utils/money.js';
 
@@ -127,15 +127,8 @@ products.forEach((product) => {
 // Puts HTML on page
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-// Updates Cart Count on main page
-function updateCartQuantity(){
-  // Updats master cart count
-  let cartQunatity = 0;
-  cart.forEach((cartItem) => {
-    cartQunatity += cartItem.quantity;
-  });
-  document.querySelector('.js-cart-quantity').innerHTML = cartQunatity;
-}
+// Updates cart quantity in top right on initalization
+calculateCartQuantity();
 
 // Add-To-Cart Button Functionality
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
@@ -152,7 +145,6 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     let {productId} = button.dataset;
   
     addToCart(productId);
-    // console.log(cart);
-    updateCartQuantity();
+    calculateCartQuantity();
   });
 });
