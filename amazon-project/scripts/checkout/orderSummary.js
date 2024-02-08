@@ -118,9 +118,14 @@ export function renderOrderSummary() {
       // Removes item from cart
       removeFromCart(productId);
       
+      // --- Old approach
       // Removes cart item's HTML
-      let container = document.querySelector(`.js-cart-item-container-${productId}`);
-      container.remove();
+      //let container = document.querySelector(`.js-cart-item-container-${productId}`);
+      //container.remove();
+      /// ----
+
+      /// New approach; re-render with new cart json
+      renderOrderSummary();
       
       // Recalculates cart quantity
       calculateCartQuantity();
@@ -163,6 +168,9 @@ export function renderOrderSummary() {
 
     // Updates HTML at top of page
     calculateCartQuantity();
+
+    // Re-renders order summary
+    renderPaymentSummary();
   }
 
   // Adds listeners to the save buttons
