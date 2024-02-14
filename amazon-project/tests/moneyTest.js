@@ -11,7 +11,6 @@ Group of related tests are called a "test suite"
 // Test suite name
 console.log('test suite: formalCurrency');
 
-
 // Test 1 - general
 console.log('converts cents into dollars');
 if(formatCurrency(2095) === '20.95') {
